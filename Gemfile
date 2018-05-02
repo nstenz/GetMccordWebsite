@@ -18,6 +18,9 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+
 # Rip erb, you will not be missed
 gem 'haml'
 gem "haml-rails", "~> 1.0"
