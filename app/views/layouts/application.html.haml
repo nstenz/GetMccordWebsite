@@ -2,9 +2,19 @@
 %html(lang='en')
   %head
     %meta{name: 'viewport', "http-equiv" => "Content-Type",
-          content: "text/html; charset=UTF-8, width=device-width, initial-scale=1, shrink-to-fit=no"}/
+          content: "text/html, charset=UTF-8, width=device-width, initial-scale=1, shrink-to-fit=no"}/
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      = link_to 'GetMccord', root_path, class: 'navbar-brand'
+      %button.navbar-toggler{type: :button, data: { toggle: :collapse, target: '#navbarSupportedContent' },
+                                            aria: { controls: 'navbarSupportedContent', expanded: false, label: 'Toggle navigation' } }
+        %span.navbar-toggler-icon
+      .collapse.navbar-collapse{ id: 'navbarSupportedContent' }
+        %ul.navbar-nav.mr-auto
+          %li.nav-item
+            = link_to GitHubProfile.sean_mccord_url, class: 'nav-link' do
+              = image_tag 'GitHub-Mark/png/GitHub-Mark-Light-120px-plus.png', size: '30x30', class: 'd-inline-block align-top'
     = yield
