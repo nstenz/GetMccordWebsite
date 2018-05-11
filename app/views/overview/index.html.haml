@@ -1,8 +1,15 @@
 .container
-  .row
-    .col-sm-4.mx-auto.d-block
+  .row.align-items-center
+    .col-sm-4.offset-sm-4
       .mt-3
-        = image_tag 'cropped_sean_small.jpg', style: 'border-radius: 50%; max-width: 100%; height: auto', class: 'img-fluid'
+        .text-center= image_tag 'cropped_sean_small.jpg', style: 'border-radius: 50%; max-width: 100%; height: auto', class: 'img-fluid'
+    .col-sm-3
+      .mt-3
+        %p.text-center{style: 'font-size: 3em;'} Hey 👋
+  %br
+  .row
+    .col
+      %p.mx-2 I'm Sean McCord, a back-end focused developer at Amazon
   - @projects.each_slice(2) do |project_a, project_b|
     .row
       .col-md-6
