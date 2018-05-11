@@ -1,3 +1,15 @@
-// Place all the styles related to the overview controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@keyframes fade-in-up-animation {
+    0% {
+       opacity: 0;
+       transform: rotate(2000deg);
+    }
+    100% {
+       opacity: 1;
+       transform: rotate(0deg);
+    }
+}
+.fade-in-up {
+    animation-name: fade-in-up-animation;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
