@@ -1,25 +1,25 @@
 .container
-  .row.align-items-center
-    .col-sm-4.offset-sm-4
+  .row.align-items-center.fade-in-up
+    .col-sm-8.col-md-7.col-lg-4
+      %h5.mt-3{style: 'text-align: center;'}
+        %pre.code-text{style: 'display: inline-block; text-align: left;'}= sean_hero_description.html_safe
+    .col-sm-4
       .mt-3
-        .fade-in-up.text-center= image_tag 'cropped_sean_small.jpg', style: 'border-radius: 50%; max-width: 100%; height: auto', class: 'img-fluid'
-    .col-sm-3
+        .text-center= image_tag 'cropped_sean_small.jpg', style: 'border-radius: 50%; max-width: 100%; height: auto', class: 'img-fluid'
+    -#Commenting out for now, might add it back later
+    -#.col-md-12.col-lg-4
       .mt-3
-        %p.text-center{style: 'font-size: 3em;'} Hey 👋
-  %br
-  .row
-    .col
-      %h3.mx-2.text-center I'm Sean McCord, a back-end focused developer at Amazon
+        %p{style: 'text-align: center; font-size: 3em;'} Hey 👋
   - @projects.each_slice(2) do |project_a, project_b|
-    .row
+    .row.mt-5
       .col-md-6
-        .card.mt-3
+        .card.mt-2
           .card-body
             %h5.card-title= project_a.name
             %p.card-text= project_a.notes
             = link_to 'GitHub', project_a.url, class: 'btn btn-outline-secondary'
       .col-md-6
-        .card.mt-3
+        .card.mt-2
           .card-body
             %h5.card-title= project_b.name
             %p.card-text= project_b.notes
