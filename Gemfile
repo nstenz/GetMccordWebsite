@@ -26,7 +26,7 @@ gem 'haml'
 gem 'haml-rails', '~> 1.0'
 
 # Debug
-gem 'pry-rails', :group => :development
+gem 'pry-rails', group: :development
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

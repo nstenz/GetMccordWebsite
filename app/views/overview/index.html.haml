@@ -10,17 +10,12 @@
     -#.col-md-12.col-lg-4
       .mt-3
         %p{style: 'text-align: center; font-size: 3em;'} Hey 👋
-  - @projects.each_slice(2) do |project_a, project_b|
+  - @projects.reverse.each_slice(2) do |projects|
     .row.mt-5
-      .col-md-6
-        .card.mt-2
-          .card-body
-            %h5.card-title= project_a.name
-            %p.card-text= project_a.notes
-            = link_to 'GitHub', project_a.url, class: 'btn btn-outline-secondary'
-      .col-md-6
-        .card.mt-2
-          .card-body
-            %h5.card-title= project_b.name
-            %p.card-text= project_b.notes
-            = link_to 'GitHub', project_b.url, class: 'btn btn-outline-secondary'
+      -projects.each do |project|
+        .col-md-6
+          .card.mt-2
+            .card-body
+              %h5.card-title= project.name
+              %pre.card-text= project.notes
+              = link_to 'GitHub', project.url, class: 'btn btn-outline-secondary'

@@ -9,7 +9,10 @@ module Projects
     end
 
     def notes
-      'A cozy home from me'
+      "A cozy home for my resume using only AWS services.\nRoute53: "\
+      "domain, dns\nCertificate Manager: https ssl cert\nCloudFront: "\
+      "asset CDN\nElastic Load Balancer: lb for EC2s\nElastic Beanstalk: "\
+      'rails servers'
     end
   end
 end
