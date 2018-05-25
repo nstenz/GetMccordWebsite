@@ -6,9 +6,9 @@ class Likes
   end
 
   def html_inspect(offset)
-     [' ' * offset,
-      '@likes=[',
-      likes.map { |like| "<span class=\"symbol\">:#{like}</span>" }.join(', '),
-      ']']
+    [' ' * offset,
+     '@likes=[',
+     likes.map { |like| "<span class=\"symbol\">:#{like}</span>" }.join(', '),
+     ']']
   end
 end
