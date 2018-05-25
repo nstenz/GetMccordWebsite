@@ -4,5 +4,7 @@ class OverviewController < ApplicationController
       Projects::RubyCodingChallenges.new,
       Projects::GetMccordWebsite.new
     ]
+
+    @human = HumanSeanContainer.new
   end
 end
