@@ -8,7 +8,7 @@ module OverviewHelper
     "   @company=\n"\
     "    <span class=\"klass\">#&lt;Company:0x#{SecureRandom.hex(10)} </span>\n"\
     "     @name=<span class=\"string\">\"Amazon\"</span>\n"\
-    " @likes=[<span class=\"symbol\">:plants</span>, "\
+    " @likes=[<span class=\"symbol\">:cats</span>, <span class=\"symbol\">:plants</span>, "\
     "<span class=\"symbol\">:food</span>]"
   end
 end
